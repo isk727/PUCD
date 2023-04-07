@@ -1,0 +1,11 @@
+[Unit]
+Description=PythonUDPClientDaemon
+
+[Service]
+ExecStart=/usr/share/pucd/pucd.py
+Restart=always
+Type=forking
+PIDFile=/var/run/pucd.pid
+
+[Install]
+WantedBy=multi-user.target
